@@ -1,0 +1,89 @@
+ [
+  {
+    "name": "HTML",
+    "level": "Advanced",
+    "width": "95%",
+    "icon": "skills/html.png",
+    "category": "frontend"
+  },
+    {
+        "name": "CSS",
+        "level": "Advanced",
+        "width": "90%",
+        "icon": "skills/css.png",
+        "category": "frontend"
+    },
+    {
+        "name": "JavaScript",
+        "level": "Advanced",
+        "width": "85%",
+        "icon": "skills/jss.JPEG",
+        "category": "frontend"
+    },
+    {
+        "name": "React.js",
+        "level": "Advanced",
+        "width": "85%",
+        "icon": "skills/react.png",
+        "category": "frontend"
+    },
+    {
+        "name": "Tailwind CSS",
+        "level": "Advanced",
+        "width": "80%",
+        "icon": "skills/tail.png",
+        "category": "frontend"
+    },
+    {
+        "name": "Bootstrap",
+        "level": "Advanced",
+        "width": "85%",
+        "icon": "skills/css.png",
+        "category": "frontend"
+    },
+    {
+        "name": "Python",
+        "level": "Advanced",
+        "width": "90%",
+        "icon": "skills/python.png",
+        "category": "programming language"
+    },
+    {
+        "name": "C",
+        "level": "Intermediate",
+        "width": "75%",
+        "icon": "skills/c++.png",
+        "category": "programming language"
+    },
+    {
+        "name": "Node.js",
+        "level": "Intermediate",
+        "width": "80%",
+        "icon": "skills/node.png",
+        "category": "backend"
+    },
+    {
+        "name": "Git",
+        "level": "Advanced",
+        "width": "85%",
+        "icon": "skills/git.png",
+        "category": "tools"
+    },
+    {
+        "name": "GitHub",
+        "level": "Advanced",
+        "width": "90%",
+        "icon": "skills/github.png",
+        "category": "tools"
+    },
+    {
+        "name": "AWS",
+        "level": "Intermediate",
+        "width": "70%",
+        "icon": "skills/aws.png",
+        "category": "backend"
+    }
+    
+ 
+]
+

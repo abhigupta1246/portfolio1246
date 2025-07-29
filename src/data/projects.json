@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Weather Web App",
+    "imageSrc": "projects/weather.png",
+    "description": "Built an interactive weather app that supports real-time weather data for both desktop and mobile with responsive design.",
+    "skills": ["HTML", "CSS", "JavaScript", "API Integration"],
+    "demo": "https://weatherjs11.netlify.app/",
+    "source": "https://github.com/abhigupta1246/js-projects.git"
+  },
+   {
+    "title": "Personal Portfolio",
+    "imageSrc": "projects/portfolio.png",
+    "description": "Developed a fully responsive personal portfolio showcasing my skills, projects, and experience, optimized for both desktop and mobile devices.",
+    "skills":["React.js","CSS","HTML","JavaScript"],
+    "demo": "https://portfolio1246.netlify.app/",
+    "source": "#"
+  },
+  {
+    "title": "Movie Website",
+    "imageSrc": "projects/movie.png",
+    "description": "Built an interactive movie web app that suggests movies to users according to their choice based on reviews and short summaries.",
+    "skills": ["JavaScript", "CSS", "HTML", "API Integration"],
+    "demo": "https://moviewebsite1246.netlify.app/",
+    "source": "https://github.com/abhigupta1246/Movie-Website"
+  }
+]

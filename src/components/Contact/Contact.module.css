@@ -1,0 +1,244 @@
+@import "../../vars.css";
+
+.container {
+  color: var(--color-text);
+  margin-top: 120px;
+  background: rgba(20, 52, 91, 0.4);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 100vw;
+  padding: 58px 10% 20px 10%;
+  gap: 10px;
+  position: relative;
+  box-shadow: 0 -8px 32px rgba(20, 52, 91, 0.3);
+}
+
+.container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.02) 0%, transparent 50%, rgba(20, 52, 91, 0.15) 100%);
+  pointer-events: none;
+}
+
+.text h2 {
+  font-size: 80px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  background: linear-gradient(135deg, #ffffff, #dbeafe);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 2;
+}
+
+.text p {
+  font-size: 40px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 2;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  list-style: none;
+  gap: 26px;
+  position: relative;
+  z-index: 2;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.link a {
+  color: var(--color-text);
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  transition: all 0.3s ease;
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+
+.link a:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #dbeafe;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(20, 52, 91, 0.3);
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  z-index: 2;
+}
+
+.copyright p {
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.7);
+  letter-spacing: 0.5px;
+  margin: 0;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Tablet Responsiveness */
+@media screen and (max-width: 830px) {
+  .container {
+    flex-direction: column;
+    gap: 40px;
+    padding: 50px 5% 20px 5%;
+    margin-top: 80px;
+  }
+
+  .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .text h2 {
+    font-size: 55px;
+    margin-bottom: 15px;
+    letter-spacing: 3px;
+  }
+
+  .text p {
+    font-size: 26px;
+    letter-spacing: 1.5px;
+  }
+
+  .links {
+    align-items: center;
+    padding-left: 0;
+    gap: 22px;
+  }
+
+  .link {
+    gap: 20px;
+  }
+
+  .link a {
+    font-size: 22px;
+    letter-spacing: 1px;
+  }
+
+  .copyright {
+    margin-top: 25px;
+    padding-top: 15px;
+  }
+
+  .copyright p {
+    font-size: 14px;
+  }
+}
+
+/* Mobile Large */
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 40px 4% 15px 4%;
+    gap: 35px;
+    margin-top: 60px;
+  }
+
+  .text h2 {
+    font-size: 40px;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+  }
+
+  .text p {
+    font-size: 20px;
+    letter-spacing: 1px;
+  }
+
+  .links {
+    gap: 18px;
+  }
+
+  .link {
+    gap: 16px;
+  }
+
+  .link a {
+    font-size: 18px;
+    letter-spacing: 0.8px;
+  }
+
+  .copyright {
+    margin-top: 20px;
+    padding-top: 12px;
+  }
+
+  .copyright p {
+    font-size: 12px;
+  }
+}
+
+/* Mobile Small */
+@media screen and (max-width: 360px) {
+  .container {
+    padding: 35px 3% 12px 3%;
+    gap: 30px;
+    margin-top: 50px;
+  }
+
+  .text h2 {
+    font-size: 32px;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+  }
+
+  .text p {
+    font-size: 16px;
+    letter-spacing: 0.8px;
+  }
+
+  .links {
+    gap: 16px;
+  }
+
+  .link {
+    gap: 14px;
+  }
+
+  .link a {
+    font-size: 16px;
+    letter-spacing: 0.6px;
+  }
+
+  .link img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .copyright {
+    margin-top: 18px;
+    padding-top: 10px;
+  }
+
+  .copyright p {
+    font-size: 11px;
+  }
+}
