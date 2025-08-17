@@ -8,18 +8,18 @@
     "source": "https://github.com/abhigupta1246/js-projects.git"
   },
    {
-    "title": "Personal Portfolio",
-    "imageSrc": "projects/portfolio.png",
-    "description": "Developed a fully responsive personal portfolio showcasing my skills, projects, and experience, optimized for both desktop and mobile devices.",
-    "skills":["React.js","CSS","HTML","JavaScript"],
-    "demo": "https://portfolio1246.netlify.app/",
-    "source": "https://github.com/abhigupta1246/portfolio1246.git"
+    "title": "Sorting visualizer",
+    "imageSrc": "projects/sortingvisual.png",
+    "description": " Implemented Bubble Sort, Selection Sort, Insertion Sort, and Merge Sort algorithms in Sorting Visualizer, optimizing code for efficient desktop performance.",
+    "skills":["React.js","CSS","HTML","JavaScript","Tailwind CSS"],
+    "demo": "https://sorting-visualizer1245.netlify.app/",
+    "source": "https://github.com/abhigupta1246/Sorting-visualizer1"
   },
   {
     "title": "Movie Website",
     "imageSrc": "projects/movie.png",
     "description": "Built an interactive movie web app that suggests movies to users according to their choice based on reviews and short summaries.",
-    "skills": ["JavaScript", "CSS", "HTML", "API Integration"],
+    "skills": ["JavaScript", "CSS", "HTML"],
     "demo": "https://moviewebsite1246.netlify.app/",
     "source": "https://github.com/abhigupta1246/Movie-Website"
   }
