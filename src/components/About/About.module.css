@@ -3,19 +3,12 @@
 .container {
   position: relative;
   background: transparent;
-    scroll-margin-top: 40px;
+  scroll-margin-top: 40px;
 
   min-height: 100vh;
   padding: 80px 24px;
   margin-top: 79px;
-  opacity: 0;
-  transform: translateY(50px);
-  transition: all 0.8s ease-out;
-}
 
-.container.visible {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 .title {
@@ -26,14 +19,7 @@
   text-align: center;
   margin-bottom: 60px;
   text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  opacity: 0;
-  transform: translateY(-30px);
-  transition: all 0.6s ease-out;
-}
 
-.slideInDown {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 .content {
@@ -63,9 +49,7 @@
     0 4px 16px rgba(0, 0, 0, 0.06),
     inset 0 1px 0 rgba(255, 255, 255, 0.2);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  opacity: 0;
-  transform: translateY(30px);
-  animation-fill-mode: forwards;
+
   cursor: pointer;
   position: relative;
   overflow: hidden;

@@ -8,10 +8,21 @@ export const ProjectCard = ({
   isVisible,
   index
 }) => {
+  const [hasAnimated, setHasAnimated] = React.useState(false);
+  
+  React.useEffect(() => {
+    if (isVisible && !hasAnimated) {
+      setHasAnimated(true);
+    }
+  }, [isVisible]);
+
   return (
     <div 
-      className={`${styles.container} ${isVisible ? styles.fadeInUp : ''}`}
-      style={{animationDelay: `${index * 0.2}s`}}
+      className={`${styles.container} ${(isVisible || hasAnimated) ? styles.fadeInUp : ''}`}
+      style={{
+        '--animation-delay': `${index * 0.2}s`,
+        animationDelay: `var(--animation-delay)`
+      }}
     >
       <img
         src={getImageUrl(imageSrc)}

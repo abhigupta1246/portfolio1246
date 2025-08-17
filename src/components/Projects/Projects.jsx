@@ -1,7 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-
 import styles from "./Projects.module.css";
-
 import projects from "../../data/projects.json";
 import { ProjectCard } from "./ProjectCard";
 
@@ -12,15 +10,21 @@ export const Projects = () => {
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          // Slight delay for title animation
-          setTimeout(() => setTitleVisible(true), 200);
-        } else {
-          setIsVisible(false);
-          setTitleVisible(false);
-        }
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            requestAnimationFrame(() => {
+              setIsVisible(true);
+              // Slight delay for title animation
+              setTimeout(() => setTitleVisible(true), 200);
+            });
+          } else {
+            requestAnimationFrame(() => {
+              setIsVisible(false);
+              setTitleVisible(false);
+            });
+          }
+        });
       },
       {
         threshold: 0.1,

@@ -1,40 +1,10 @@
 
-import React, { useEffect, useRef, useState } from "react";
-
+import React, { useState } from "react";
 import styles from "./About.module.css";
 import { getImageUrl } from "../../utils";
 
 export const About = () => {
-  const [isVisible, setIsVisible] = useState(false);
   const [selectedTags, setSelectedTags] = useState(new Set());
-  const aboutRef = useRef(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        } else {
-          // Reset animation when out of view to replay when scrolling back
-          setIsVisible(false);
-        }
-      },
-      {
-        threshold: 0.2,
-        rootMargin: '-50px 0px -50px 0px'
-      }
-    );
-
-    if (aboutRef.current) {
-      observer.observe(aboutRef.current);
-    }
-
-    return () => {
-      if (aboutRef.current) {
-        observer.unobserve(aboutRef.current);
-      }
-    };
-  }, []);
 
   const handleTagClick = (tagName) => {
     setSelectedTags(prev => {
@@ -49,16 +19,16 @@ export const About = () => {
   };
 
   return (
-    <section className={`${styles.container} ${isVisible ? styles.visible : ''}`} id="about" ref={aboutRef}>
-      <h2 className={`${styles.title} ${isVisible ? styles.slideInDown : ''}`}>About</h2>
+    <section className={styles.container} id="about">
+      <h2 className={styles.title}>About</h2>
       <div className={styles.content}>
         <div className={styles.aboutCards}>
-          <div className={`${styles.aboutCard} ${isVisible ? styles.fadeInUp : ''}`} style={{animationDelay: '0.2s'}}>
+          <div className={styles.aboutCard}>
             <div className={styles.cardHeader}>
               <div className={styles.iconContainer}>
                 <img src={getImageUrl("about/cursorIcon.png")} alt="Frontend icon" />
               </div>
-              <h3>Frontend Developer</h3>
+              <h3>Frontend Developement</h3>
             </div>
             <p className={styles.cardDescription}>
               I'm a full stack developer proficient in React.js, JavaScript, HTML, CSS, Bootstrap, and 
@@ -106,12 +76,12 @@ export const About = () => {
             </div>
           </div>
 
-          <div className={`${styles.aboutCard} ${isVisible ? styles.fadeInUp : ''}`} style={{animationDelay: '0.4s'}}>
+          <div className={styles.aboutCard}>
             <div className={styles.cardHeader}>
               <div className={styles.iconContainer}>
                 <img src={getImageUrl("about/serverIcon.png")} alt="Backend icon" />
               </div>
-              <h3>Backend Developer</h3>
+              <h3>Backend Developement</h3>
             </div>
             <p className={styles.cardDescription}>
               I have experience with full-stack web development, proficient in Python, 
@@ -157,7 +127,7 @@ export const About = () => {
             </div>
           </div>
 
-          <div className={`${styles.aboutCard} ${isVisible ? styles.fadeInUp : ''}`} style={{animationDelay: '0.6s'}}>
+          <div className={styles.aboutCard}>
             <div className={styles.cardHeader}>
               <div className={styles.iconContainer}>
                 <img src={getImageUrl("about/cursorIcon.png")} alt="Problem solving icon" />
@@ -183,9 +153,9 @@ export const About = () => {
               </span>
               <span 
                 className={`${styles.tag} ${selectedTags.has('C Programming') ? styles.selected : ''}`}
-                onClick={() => handleTagClick('C Programming')}
+                onClick={() => handleTagClick('Pthon Programming')}
               >
-                C Programming
+                Python Programming
               </span>
              
             </div>

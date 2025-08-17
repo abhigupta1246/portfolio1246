@@ -36,7 +36,7 @@
   z-index: 1;
   opacity: 0;
   transform: translateY(50px);
-  transition: all 0.8s ease-out;
+  transition: all 0.3s ease-out;
 }
 
 .content.fadeInUp {
@@ -272,7 +272,7 @@
   height: 100%;
   pointer-events: none;
   z-index: 0;
-}
+} 
 
 .floatingElement {
   position: absolute;
@@ -310,9 +310,9 @@
   right: 40%;
   animation-delay: 1s;
   animation-duration: 9s;
-}
+} 
 
-@keyframes float {
+  @keyframes float {
   0%, 100% {
     transform: translateY(0px) rotate(0deg);
     opacity: 0.6;
@@ -320,8 +320,8 @@
   50% {
     transform: translateY(-20px) rotate(180deg);
     opacity: 1;
-  }
-}
+  } }
+ 
 
 .topBlur {
   position: absolute;
