@@ -30,7 +30,11 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.02) 0%, transparent 50%, rgba(20, 52, 91, 0.15) 100%);
+  background: linear-gradient(135deg, 
+    rgba(20, 52, 91, 0.1) 0%, 
+    transparent 50%, 
+    rgba(31, 38, 135, 0.15) 100%
+  );
   pointer-events: none;
 }
 
@@ -102,19 +106,24 @@
 }
 
 .contactForm {
-  background: linear-gradient(135deg, rgba(49, 2, 219, 0.922), rgba(20, 20, 97, 0.9));
-  padding: 30px;
-  border-radius: 16px;
+  background: linear-gradient(
+    135deg,
+    rgba(20, 52, 91, 0.8),
+    rgba(31, 38, 135, 0.7)
+  );
+  padding: 25px;
+  border-radius: 20px;
   width: 100%;
-  max-width: 350px;
+  max-width: 320px;
   position: relative;
   box-shadow: 
-    0 8px 32px rgba(31, 38, 135, 0.37),
-    0 0 0 1px rgba(255, 255, 255, 0.1),
+    0 8px 32px rgba(31, 38, 135, 0.4),
+    0 4px 8px rgba(0, 0, 0, 0.1),
     inset 0 0 32px rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  border: 2px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   overflow: hidden;
+  animation: formAppear 0.6s ease-out;
 }
 
 .contactForm::before {
@@ -134,46 +143,88 @@
   pointer-events: none;
 }
 
+@keyframes formAppear {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatingInput {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 .contactForm h2 {
   color: #fff;
   font-size: 24px;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   text-align: center;
   letter-spacing: 2px;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  text-shadow: 
+    0 2px 4px rgba(0, 0, 0, 0.3),
+    0 0 20px rgba(255, 255, 255, 0.1);
+  background: linear-gradient(135deg, #fff, #dbeafe);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .formGroup {
   margin-bottom: 20px;
   position: relative;
+  animation: floatingInput 6s ease-in-out infinite;
+}
+
+.formGroup:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.formGroup:nth-child(3) {
+  animation-delay: 0.4s;
 }
 
 .formGroup input,
 .formGroup textarea {
   width: 100%;
   padding: 12px;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
   color: #fff;
   font-size: 14px;
   transition: all 0.3s ease;
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 
+    inset 0 2px 4px rgba(0, 0, 0, 0.1),
+    0 0 0 1px rgba(255, 255, 255, 0.05);
 }
 
 .formGroup textarea {
-  height: 120px;
+  height: 100px;
   resize: none;
+  margin-bottom: 8px;
 }
 
 .formGroup input:focus,
 .formGroup textarea:focus {
   outline: none;
-  border-color: rgba(255, 255, 255, 0.5);
-  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.08);
   box-shadow: 
     inset 0 2px 4px rgba(0, 0, 0, 0.1),
-    0 0 8px rgba(255, 255, 255, 0.2);
+    0 0 15px rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
 }
 
 .formGroup input::placeholder,
@@ -183,12 +234,16 @@
 
 .submitButton {
   width: 100%;
-  padding: 15px;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(20, 23, 219, 0.235);
-  border-radius: 8px;
+  padding: 12px;
+  background: linear-gradient(
+    135deg,
+    rgba(20, 52, 91, 0.9),
+    rgba(31, 38, 135, 0.8)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
   color: white;
-  font-size: 16px;
+  font-size: 14px;
   cursor: pointer;
   transition: all 0.3s ease;
   text-transform: uppercase;
@@ -196,15 +251,21 @@
   font-weight: 600;
   position: relative;
   overflow: hidden;
+  margin-top: 10px;
 }
 
 .submitButton:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: linear-gradient(
+    135deg,
+    rgba(31, 38, 135, 0.9),
+    rgba(20, 52, 91, 0.8)
+  );
   border-color: rgba(255, 255, 255, 0.3);
   transform: translateY(-2px);
   box-shadow: 
-    0 4px 12px rgba(0, 0, 0, 0.2),
-    0 0 0 1px rgba(255, 255, 255, 0.2);
+    0 8px 20px rgba(0, 0, 0, 0.3),
+    0 0 0 1px rgba(255, 255, 255, 0.2),
+    inset 0 0 15px rgba(255, 255, 255, 0.1);
 }
 
 .submitButton:disabled {
